@@ -1,6 +1,6 @@
 const models = require('../../database/models');
 
-const index = async (req, res) => {
+const index = async (req, res, next) => {
   try {
     const quotes = await models.Quote.findAll({
       attributes: ['quote', 'author']
@@ -9,12 +9,11 @@ const index = async (req, res) => {
     return res.json(quotes);
 
   } catch(err) {
-    console.error(err);
-    return res.status(500).json({ error: err.message });
+    next(err);
   }
 };
 
-const random = async (req, res) => {
+const random = async (req, res, next) => {
   try {
     const quote = await models.Quote.findOne({
       attributes: ['quote', 'author'],
@@ -24,8 +23,7 @@ const random = async (req, res) => {
     return res.json(quote);
 
   } catch(err) {
-    console.error(err);
-    return res.status(500).json({ error: err.message });
+    next(err);
   }
 };
 
