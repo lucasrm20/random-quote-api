@@ -4,7 +4,7 @@
 
 API created to serve quotes to use on [FreeCodeCamp Random Quote Machine Challenge](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine).
 
-You can access it [here](https://lucas-rodrigues20-random-quote-api.glitch.me).
+You can access it [here](https://fcc-random-quote-api.glitch.me).
 
 #### How to run
 
